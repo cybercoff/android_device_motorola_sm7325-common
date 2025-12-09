@@ -185,4 +185,12 @@
 
     <!-- Whether to select voice/data/sms preference without user confirmation -->
     <bool name="config_voice_data_sms_auto_fallback">true</bool>
+
+    <!-- Package name of a telephony-related system app, such as an IMS service.
+         Exempted from privacy indicators. -->
+    <string name="config_systemTelephonyPackage" translatable="false">com.qualcomm.qti.cne</string>
+
+    <!-- Whether WM DisplayContent supports high performance transitions
+         (lower-end devices may want to disable) -->
+    <bool name="config_deviceSupportsHighPerfTransitions">false</bool>
 </resources>
