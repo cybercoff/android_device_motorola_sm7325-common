@@ -105,9 +105,6 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set_bool,stagefright,target_disable_thumbnail_block_model,true)
 
-# Charger
-WITH_LINEAGE_CHARGER := false
-
 # Device ID attestation
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
@@ -152,7 +149,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.qti
+    android.hardware.health-service.qti \
+    android.hardware.health-service.qti_recovery
 
 # Init
 PRODUCT_COPY_FILES += \
