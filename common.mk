@@ -142,10 +142,7 @@ PRODUCT_PACKAGES += \
     flp.conf \
     gnss_antenna_info.conf \
     gps.conf \
-    izat.conf \
-    lowi.conf \
-    sap.conf \
-    xtwifi.conf
+    izat.conf
 
 # Health
 PRODUCT_PACKAGES += \
@@ -340,9 +337,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
-
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
@@ -376,6 +370,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+
+# HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    device/motorola/sm7325-common/vintf/device_framework_matrix.xml \
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml
+DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE += device/motorola/sm7325-common/vintf/manifest.xml
 
 # WiFi
 PRODUCT_PACKAGES += \
